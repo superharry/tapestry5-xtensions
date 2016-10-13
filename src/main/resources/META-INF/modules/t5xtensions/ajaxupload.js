@@ -59,5 +59,18 @@ define(["jquery", "t5/core/events", "t5/core/zone", "blueimp/jquery.fileupload"]
             	}
             }
         });
+        
+        $('#' + spec.inputId).removeAttr('disabled');
+        
+        $('#' + spec.dropZone + ' .fileinput-button').removeClass('loading');
+
+        $('#' + spec.dropZone)
+            .on('dragover dragenter', function() {
+                $(this).addClass('is-dragover');
+            })
+            .on('dragleave dragend drop', function() {
+                $(this).removeClass('is-dragover');
+            });
+            
     };
 });

@@ -132,7 +132,7 @@ public class AjaxUpload extends AbstractField {
     void beginRender ( MarkupWriter writer ) {
         formSupport.setEncodingType ( MULTIPART_ENCTYPE );
         writer.element ( "div", "class", "form-control-static", "id", getFormControlId () );
-        writer.element ( "span", "class", "fileinput-button " + cssClass );
+        writer.element ( "span", "class", "fileinput-button loading " + cssClass );
         if ( StringUtils.isNotBlank ( glyphiconName ) ) {
             writer.element ( "i", "class", "glyphicon " + glyphiconName); writer.end ();
         } else {
@@ -140,7 +140,7 @@ public class AjaxUpload extends AbstractField {
         }
         writer.writeRaw ( "&#160;" );
         writer.element ( "span", "id", getFilenameId() ).raw ( createButtonText() ); writer.end ();
-        writer.element ( "input", "type", "file", "id", getClientId (), "name", getControlName () );
+        writer.element ( "input", "type", "file", "id", getClientId (), "name", getControlName (), "disabled", "disabled" );
 
         validate.render ( writer );
         resources.renderInformalParameters ( writer );

@@ -131,23 +131,23 @@
         </executions>
       </plugin>
 
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.5</version>
-        <executions>
-          <execution>
-            <id>sign-artifacts</id>
-            <phase>verify</phase>
-            <goals>
-              <goal>sign</goal>
-            </goals>
-            <configuration>
-              <executable>gpg2</executable>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
+<!--       <PLUGIN> -->
+<!--         <GROUPID>ORG.APACHE.MAVEN.PLUGINS</GROUPID> -->
+<!--         <ARTIFACTID>MAVEN-GPG-PLUGIN</ARTIFACTID> -->
+<!--         <VERSION>1.5</VERSION> -->
+<!--         <EXECUTIONS> -->
+<!--           <EXECUTION> -->
+<!--             <ID>SIGN-ARTIFACTS</ID> -->
+<!--             <PHASE>VERIFY</PHASE> -->
+<!--             <GOALS> -->
+<!--               <GOAL>SIGN</GOAL> -->
+<!--             </GOALS> -->
+<!--             <CONFIGURATION> -->
+<!--               <EXECUTABLE>GPG2</EXECUTABLE> -->
+<!--             </CONFIGURATION> -->
+<!--           </EXECUTION> -->
+<!--         </EXECUTIONS> -->
+<!--       </PLUGIN> -->
     
     </plugins>
   </build>
